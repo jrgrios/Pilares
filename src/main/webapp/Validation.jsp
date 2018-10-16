@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="insert" method="post">
+<form action="/Validation" method="post">
 		<span>Nombre Actividad</span> <input type="text" id="name" /> 
 		<span>Aforo previsto</span>	<input type="text" id="prevision" /> <input type="submit" value="enviar" />
 	</form>

@@ -7,7 +7,7 @@
 <title>formulario nuevas actividades</title>
 </head>
 <body>
-	<form action="insert" method="post">
+	<form action="/insert" method="post">
 		<span>Nombre Actividad</span> <input type="text" id="name" /> 
 		<span>Aforo</span>	<input type="text" id="gauging" /> <input type="submit" value="enviar" />
 	</form>

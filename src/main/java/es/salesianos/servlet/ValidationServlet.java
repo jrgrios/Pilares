@@ -24,7 +24,6 @@ public class ValidationServlet extends BaseServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		super.doPost(request, response);
 		Activity activity = getActivityFromRequest(request);
 		if(repository.activityIsRealizable(activity)) {
 			redirect(request, response, "/ok.jsp");

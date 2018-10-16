@@ -21,7 +21,6 @@ public class InsertDataServlet extends BaseServlet{
 		
 		Activity activity = getActivityFromRequest(req);
 		repository.insert(activity);
-		super.doPost(req, resp);
 		redirect(req, resp, "/feedback.jsp");
 	}
 
