@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="/Validation" method="post">
-		<span>Nombre Actividad</span> <input type="text" id="name" /> 
-		<span>Aforo previsto</span>	<input type="text" id="prevision" /> <input type="submit" value="enviar" />
+		<span>Nombre Actividad</span> <input type="text" id="name" name="name"/> 
+		<span>Aforo previsto</span>	<input type="text" id="gauging" name="gauging"/> <input type="submit" value="enviar" />
 	</form>
 	<a href="index.jsp">Volver a Home</a>
 	

@@ -13,7 +13,6 @@ import es.salesianos.repository.ActividadesRepository;
 /**
  * Servlet implementation class ValidationServlet
  */
-@WebServlet("/Validation")
 public class ValidationServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,8 +26,8 @@ public class ValidationServlet extends BaseServlet {
 		Activity activity = getActivityFromRequest(request);
 		if(repository.activityIsRealizable(activity)) {
 			redirect(request, response, "/ok.jsp");
-		}
-		redirect(request, response, "/fail.jsp");
+		}else
+			redirect(request, response, "/fail.jsp");
 	}
 
 }

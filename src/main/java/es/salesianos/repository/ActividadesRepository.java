@@ -41,13 +41,18 @@ public class ActividadesRepository {
 		PreparedStatement preparedStatement = null;
 		try {
 			preparedStatement = conn
-					.prepareStatement("SELECT FROM Activity (name)" + "VALUES (?)");
+					.prepareStatement("SELECT * FROM ACTIVITY " + "WHERE name = ?");
 			preparedStatement.setString(1, activity.getName());
+							System.out.println(activity.getName());
+
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
 				int gauging = resultSet.getInt("gauging");
+				System.out.println(gauging);
 				if(activity.getAforo() < gauging) {
 					isRealizable = true;
+				}else{
+					isRealizable = false;
 				}
 			}
 		} catch (SQLException e) {

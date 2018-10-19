@@ -19,9 +19,13 @@ public abstract class BaseServlet extends HttpServlet {
 
 	protected Activity getActivityFromRequest(HttpServletRequest req) {
 		Activity activity = new Activity();
+		System.out.println(req.getParameter("name"));
+		System.out.println(req.getParameter("gauging"));
 		activity.setName(req.getParameter("name"));
+		System.out.println(activity.getName());
 		Optional<String> optional = Optional.ofNullable(req.getParameter("gauging"));
 		activity.setAforo(Integer.parseInt(optional.orElse("0")));
+		System.out.println(activity.getAforo());
 		return activity;
 	}
 
